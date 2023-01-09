@@ -7,3 +7,6 @@ CalculationOfLine2.Line2();
 
 //Comparision of both lines
 ComparisionOfLines.Bothlines();
+
+//Comparision of lines using Equals method
+ComparisionOfLines_2.Equalsmethod();

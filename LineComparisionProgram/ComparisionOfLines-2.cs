@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace LineComparisionProgram
 {
-    public  class ComparisionOfLines
+    public  class ComparisionOfLines_2
     {
-        public static void Bothlines()
+        public static void Equalsmethod()
         {
+
             int x1, y1, x2, y2, length1;
             int p, q, r, s, length2;
 
@@ -26,7 +27,7 @@ namespace LineComparisionProgram
             length1 = (int)Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
             Console.WriteLine("The value of Length1 :{0}", length1);
 
-            
+
             Console.WriteLine("Calculation of 2nd Line length");
             Console.WriteLine("Enter a value for p,q,r,s");
             Console.Write("p :");
@@ -40,27 +41,20 @@ namespace LineComparisionProgram
             length2 = (int)Math.Sqrt((p - q) ^ 2 + (r - s) ^ 2);
             Console.WriteLine("The value of Length2 :{0}", length2);
 
-            Console.WriteLine("Comparing of Line1 and Line2");
-           int result=length1.CompareTo(length2);
-            if(result==0)
+
+
+            // Applying Equals Methods
+            bool status = length1.Equals(length2);
+
+            if (status == false)
             {
-                Console.WriteLine("Both lines are equal");
+                Console.WriteLine("The given length are not Equal");
             }
-            else if(result>0)
+            else
             {
-                Console.WriteLine("Line1 is greater than Line2");
-            }
-            else if(result<0)
-            {
-                Console.WriteLine("Line2 is greater than Line1");
+                Console.WriteLine("The given length are Equal");
             }
 
-           
         }
-
-        
-
-
     }
-
 }
